@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace PTSLibrary
 {
-    public class PTSCustomerFacade : PTSSuperFacade
+    public class PTSClientFacade : PTSSuperFacade
     {
-        private DAO.CustomerDAO dao;
-        public PTSCustomerFacade():base(new DAO.CustomerDAO())
+        private DAO.ClientDAO dao;
+
+        public PTSClientFacade(): base(new DAO.ClientDAO())
         {
-            dao = (DAO.CustomerDAO)base.dao;
+            dao = (DAO.ClientDAO)base.dao;
 
         }
-
-        public int Authenticate(string username, string password)
+        public TeamLeader Authenticate(string username, string password)
         {
             if (username == "" || password == "")
             {
@@ -24,11 +24,9 @@ namespace PTSLibrary
             }
             return dao.Authenticate(username, password);
         }
-
-        public Project[] GetListOfProjects(int customerId)
+        public Project[] GetListOfProjects(int teamId)
         {
-            return (dao.GetListOfProjects(customerId)).ToArray();
+            return (dao.GetListOfProjects(teamId)).ToArray();
         }
-
     }
 }

@@ -4,7 +4,8 @@ using System.Text;
 
 namespace PTSLibrary
 {
-    class Project
+    [Serializable]
+    public class Project
     {
         private string name;
         private DateTime expectedStartDate;

@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace PTSLibrary
 {
-    class TeamLeader : User
+    [Serializable]
+    public class TeamLeader : User
     {
         private int teamId;
 

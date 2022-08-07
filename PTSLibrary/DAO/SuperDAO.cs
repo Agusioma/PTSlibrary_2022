@@ -6,7 +6,7 @@ using System.Data;
 
 namespace PTSLibrary.DAO
 {
-    class SuperDAO
+    public class SuperDAO
     {
         protected Customer GetCustomer(int custId)
         {

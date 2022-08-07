@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace PTSLibrary
 {
-    class Task
+    [Serializable]
+    public class Task
     {
         private Guid taskId;
         private string name;

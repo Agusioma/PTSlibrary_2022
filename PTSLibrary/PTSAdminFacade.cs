@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+
 namespace PTSLibrary
 {
-    class PTSAdminFacade : PTSSuperFacade
+   public class PTSAdminFacade : PTSSuperFacade
     {
         private DAO.AdminDAO dao;
         public PTSAdminFacade() : base(new DAO.AdminDAO())
